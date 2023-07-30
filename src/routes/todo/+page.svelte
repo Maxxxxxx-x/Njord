@@ -6,14 +6,18 @@
         },
         {
             task: "Add Options to get-info page",
-            completed: false,
+            completed: true,
         },
         {
             task: "Add token decode to get-info page",
-            completed: false,
+            completed: true,
         },
         {
             task: "Create login page for Maxx",
+            completed: true,
+        },
+        {
+            task: "Login API ",
             completed: false,
         },
         {
