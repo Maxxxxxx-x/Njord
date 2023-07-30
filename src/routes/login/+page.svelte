@@ -7,5 +7,5 @@
 </svelte:head>
 
 <div>
-    Login Page
+    login page
 </div>
