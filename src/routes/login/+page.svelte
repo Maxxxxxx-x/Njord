@@ -16,7 +16,7 @@
         }
         console.log("Both exists");
         try {
-            const res = await fetch("/api/login", {
+            const res = await fetch("/api/accounts/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -26,8 +26,7 @@
                     Password: Password
                 })
             })
-            const body = await res.json();
-            alert(res.status, body);
+
         } catch(err) {
             if (err instanceof Error) {
                ErrorStr = err.message;
@@ -47,11 +46,11 @@
 <div class="flex h-screen items-center justify-center">
     <div class="flex flex-col border w-full max-w-xl rounded-xl p-10 gap-5">
         <a class="hover:underline text-lg" href="/">← Back</a>
-        <h1 class="text-bold text-2xl self-center">Login to access the dashboard</h1>
+        <h1 class="text-bold text-2xl self-center text-[#F0F0F0]">Login to access the dashboard</h1>
         <divider class="divider divider-verticle"/>
-        <label class="font-bold text-2xl" for="">Username</label>
+        <label class="font-bold text-2xl text-[#F0F0F0]" for="">Username</label>
         <input class="input input-bordered" type="text" placeholder="Enter your username" bind:value={Username} />
-        <label class="font-bold text-2xl" for="">Password</label>
+        <label class="font-bold text-2xl text-[#F0F0F0]" for="">Password</label>
         <input class="input input-bordered" type="password" placeholder="Enter your password" bind:value={Password} />
         {#if Failed}
         <p class="text-error">Please check your username and password</p>

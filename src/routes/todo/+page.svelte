@@ -41,7 +41,6 @@
 
 <svelte:head>
     <title>Todo | Njord  </title>
-    <meta name="description" content="todo list for Njord"/>
 </svelte:head>
 
 <div class="flex justify-center">

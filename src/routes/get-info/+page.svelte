@@ -32,7 +32,7 @@
     <div class="flex flex-col justify-start border w-full max-w-xl rounded-xl p-10 gap-5">
         <a class="hover:underline text-lg" href="/">← Back</a>
         <div class="flex flex-col justify-start gap-y-10">
-            <label class="font-bold text-3xl" for="">Token</label>
+            <label class="font-bold text-3xl text-[#F0F0F0]" for="">Token</label>
             <input class="input input-bordered" type="text" placeholder="Enter token here" bind:value={Token} on:keyup={GetTokenData}/>
         </div>
         {#if Token}
