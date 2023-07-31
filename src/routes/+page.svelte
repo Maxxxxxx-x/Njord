@@ -34,7 +34,7 @@
             <a class="btn btn-lg hover:btn-accent px-10" href="/login">Dashboard</a>
             <a class="btn btn-lg hover:btn-accent" href="/get-info">Get Token Info</a>
         </div>
-        <div class="flex justify-center items-center inset-y-28">
+        <div class="flex justify-center items-center inset-y-20">
             <h1 class="text-md">Inspired by <a class="hover:underline" href="https://hermes.csie.cool/">Hermes</a></h1>
         </div>
     </div>
