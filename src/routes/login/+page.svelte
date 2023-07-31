@@ -26,6 +26,8 @@
                     Password: Password
                 })
             })
+            const body = await res.json();
+            alert(res.status, body);
         } catch(err) {
             if (err instanceof Error) {
                ErrorStr = err.message;
