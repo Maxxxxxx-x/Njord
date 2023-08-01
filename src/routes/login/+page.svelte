@@ -45,6 +45,7 @@
 
 <div class="flex h-screen items-center justify-center">
     <div class="hidden md:flex lg:flex flex-col border w-full max-w-xl rounded-xl p-10 gap-5">
+        
         <a class="hover:underline text-lg" href="/">← Back</a>
         <h1 class="text-bold text-2xl self-center text-[#F0F0F0]">Login to access the dashboard</h1>
         <divider class="divider divider-verticle"/>
