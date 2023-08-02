@@ -11,6 +11,7 @@
 
     function GetTokenData() {
         try {
+            Token = Token.replace(/\s/g, "");
             const Payload = decode(Token).payload;
             IsValid = true;
             AllowList = Payload.AllowList;
@@ -43,15 +44,10 @@
                     <p class="my-2">{TokenName}</p>
                     <div class="divider divider-verticle before:bg-[#888787] after:bg-[#888787]"/>
                     <p class="font-bold">Issued At</p>
-                    <p class="my-2">{IssuedAt.toISOString()}</p>
-                    <div class="divider divider-verticle before:bg-[#888787] after:bg-[#888787]"/>
-                    <p class="font-bold">Never Expire</p>
-                    <p class="my-2">{NeverExpire}</p>
-                    {#if !NeverExpire}
+                    <p class="my-2">{IssuedAt.toLocaleString()}</p>
                     <div class="divider divider-verticle before:bg-[#888787] after:bg-[#888787]"/>
                     <p class="font-bold">Expiration</p>
-                    <p class="my-2">{Exp.toISOString()}</p>
-                    {/if}
+                    <p class="my-2">{NeverExpire ? "Never" : Exp.toLocaleString()}</p>
                     <div class="divider divider-verticle before:bg-[#888787] after:bg-[#888787]"/>
                     <p class="font-bold">Allow list</p>
                     {#each AllowList as Email}

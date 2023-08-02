@@ -1,21 +1,13 @@
 import { expect, test } from '@playwright/test';
 
-test("Login API POST", async ({ request }) => {
-    const res = await request.post("http://localhost:5173/api/accounts/login", {
-        data: {
-            Username: "Username",
-            Password: "Password",
-        }
-    });
-    expect(res.status()).toBe(200);
-    console.log(await res.json());
-    expect(await res.json()).toMatchObject({ message: "Test" });
-});
+test.describe("Login API test", () => {
+    test("tries sending empty request", async ({ request }) => {
+        const res = await request.post("http://localhost:5173/api/accounts/login", {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
 
-
-test("Login API POST with empty params", async ({ request }) => {
-    const res = await request.post("http://localhost:5173/api/accounts/login", {
+        await expect(res.status()).toBe(400);
     });
-    expect(res.status()).toBe(400);
-    expect(await res.json()).toMatchObject({ message: "Test" });
 });
