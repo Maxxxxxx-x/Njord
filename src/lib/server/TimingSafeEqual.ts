@@ -1,15 +1,15 @@
-export function TimingSafeEqual(a: string, b: string) : boolean {
-    const StringA = String(a);
-    let StringB = String(b);
+export function TimingSafeEqual(a : string, b : string) {
+    const StrA = Buffer.from(a);
+    let StrB = Buffer.from(b);
     let Flags = 0;
 
-    if (StringA.length != StringB.length) {
-        StringB = StringA;
-        Flags = 1;
+    if (StrA.length !== StrB.length) {
+        StrB = StrA;
+        Flags += 1;
     }
 
-    for (let i = 0; i < StringA.length; i++) {
-        Flags |= (StringA.charCodeAt(i) ^ StringB.charCodeAt(i));
+    for (let i = 0; i < StrA.length; i++) {
+        Flags |= StrA[i] ^ StrB[i];
     }
 
     return Flags === 0;

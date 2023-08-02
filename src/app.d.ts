@@ -10,9 +10,7 @@ declare global {
 		interface Platform {
 			env? : {
 				STORE : KVNamespace;
-				//fallback 512 bit token secret
-				MAIN_KEY : string;
-				TOKEN_SECRET : string;
+				ACCOUNTS : KVNamespace;
 			}
 		}
 	}
