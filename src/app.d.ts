@@ -6,11 +6,13 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		// interface Platform {}
 		interface Platform {
 			env? : {
-				STORE : KVNamespace;
+				TOKENS : KVNamespace;
 				ACCOUNTS : KVNamespace;
+				ACCESS_TOKEN_SECRET : string;
+				ACCESS_TOKEN_EXPIRE : string;
+				NJORD_TOKEN_SECRET : string;
 			}
 		}
 	}
